@@ -1,13 +1,10 @@
-﻿@{ 
-     ViewData["Title"] = "Danh sách trẻ"; 
-     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml"; 
-} 
+﻿
 <div class="d-flex">
     <div style="height: calc(100vh - 179px); width: 22%;"></div>
 
     <div class="px-5 py-3" style="background-color: #e0e0e0; min-height: 50vh; width: 78%;">
         <div class="">
-            <p class="fs-5">DANH SÁCH TRẺ EM</p>
+            <p class="fs-5">XÁC NHẬN TRẺ</p>
             <div class="shadow bg-white rounded p-5 position-relative">
                 <div class="d-flex justify-content-end mb-3 gap-3">
                     <!-- Ô lọc giới tính -->
@@ -17,10 +14,6 @@
                         <option value="Nữ">Nữ</option>
                     </select>
                     <input type="text" id="searchInput" class="form-control w-25" placeholder="Tìm kiếm theo tên...">
-                    <a asp-area="Admin" asp-controller="Home" asp-action="CreateChild" class="btn btn-primary">
-                        Thêm trẻ
-                    </a>
-
                 </div>
                 <table class="table table-bordered align-middle">
                     <thead class="table-primary text-center">
@@ -29,7 +22,7 @@
                             <th>Họ và tên</th>
                             <th>Giới tính</th>
                             <th>Ngày sinh</th>
-                            <th>Hoàn cảnh</th>
+                            <th>Cách thức</th>
                             <th>Hành động</th>
                         </tr>
                     </thead>
@@ -41,13 +34,11 @@
                             <td class="text-center">Nguyễn Phước Kỳ111</td>
                             <td class="text-center">Nữ</td>
                             <td class="text-center">15-01-2004</td>
-                            <td>Trẻ bị bỏ rơi</td>
+                            <td>Nhận nuôi</td>
                             <td class="text-center">
-                                <a asp-area="Admin" asp-controller="Home" asp-action="EditChild" class="btn btn-sm btn-info text-white">
-                                    <i class="fa-solid fa-eye"></i>
+                                <a asp-area="Admin" asp-controller="Home" asp-action="AcceptChild" class="btn btn-sm btn-info text-white">
+                                    Xem chi tiết
                                 </a>
-                                <button class="btn btn-sm btn-warning"><i class="fa-solid fa-pen-to-square"></i></button>
-                                <button class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
                             </td>
                         </tr>
                         <tr>
@@ -57,13 +48,11 @@
                             <td class="text-center">Nguyễn Phước Kỳ111</td>
                             <td class="text-center">Nữ</td>
                             <td class="text-center">15-01-2004</td>
-                            <td>Trẻ bị bỏ rơi</td>
+                            <td>Nhận nuôi</td>
                             <td class="text-center">
-                                <a asp-area="Admin" asp-controller="Home" asp-action="EditChild" class="btn btn-sm btn-info text-white">
-                                    <i class="fa-solid fa-eye"></i>
+                                <a asp-area="Admin" asp-controller="Home" asp-action="AcceptChild" class="btn btn-sm btn-info text-white">
+                                    Xem chi tiết
                                 </a>
-                                <button class="btn btn-sm btn-warning"><i class="fa-solid fa-pen-to-square"></i></button>
-                                <button class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
                             </td>
                         </tr>
                         <tr>
@@ -73,13 +62,11 @@
                             <td class="text-center">Nguyễn Phước Kỳ111</td>
                             <td class="text-center">Nữ</td>
                             <td class="text-center">15-01-2004</td>
-                            <td>Trẻ bị bỏ rơi</td>
+                            <td>Gửi đi</td>
                             <td class="text-center">
-                                <a asp-area="Admin" asp-controller="Home" asp-action="EditChild" class="btn btn-sm btn-info text-white">
-                                    <i class="fa-solid fa-eye"></i>
+                                <a asp-area="Admin" asp-controller="Home" asp-action="AcceptChild" class="btn btn-sm btn-info text-white">
+                                    Xem chi tiết
                                 </a>
-                                <button class="btn btn-sm btn-warning"><i class="fa-solid fa-pen-to-square"></i></button>
-                                <button class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
                             </td>
                         </tr>
                         <tr>
@@ -89,13 +76,11 @@
                             <td class="text-center">Nguyễn Phước Kỳ222</td>
                             <td class="text-center">Nữ</td>
                             <td class="text-center">15-01-2004</td>
-                            <td>Trẻ bị bỏ rơi</td>
+                            <td>Nhận nuôi</td>
                             <td class="text-center">
-                                <a asp-area="Admin" asp-controller="Home" asp-action="EditChild" class="btn btn-sm btn-info text-white">
-                                    <i class="fa-solid fa-eye"></i>
+                                <a asp-area="Admin" asp-controller="Home" asp-action="AcceptChild" class="btn btn-sm btn-info text-white">
+                                    Xem chi tiết
                                 </a>
-                                <button class="btn btn-sm btn-warning"><i class="fa-solid fa-pen-to-square"></i></button>
-                                <button class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
                             </td>
                         </tr>
                         <tr>
@@ -105,13 +90,11 @@
                             <td class="text-center">Nguyễn Phước Kỳ222</td>
                             <td class="text-center">Nam</td>
                             <td class="text-center">15-01-2004</td>
-                            <td>Trẻ bị bỏ rơi</td>
+                            <td>Gửi đi</td>
                             <td class="text-center">
-                                <a asp-area="Admin" asp-controller="Home" asp-action="EditChild" class="btn btn-sm btn-info text-white">
-                                    <i class="fa-solid fa-eye"></i>
+                                <a asp-area="Admin" asp-controller="Home" asp-action="AcceptChild" class="btn btn-sm btn-info text-white">
+                                    Xem chi tiết
                                 </a>
-                                <button class="btn btn-sm btn-warning"><i class="fa-solid fa-pen-to-square"></i></button>
-                                <button class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
                             </td>
                         </tr>
                         <tr>
@@ -121,13 +104,11 @@
                             <td class="text-center">Nguyễn Phước Kỳ222</td>
                             <td class="text-center">Nam</td>
                             <td class="text-center">15-01-2004</td>
-                            <td>Trẻ bị bỏ rơi</td>
+                            <td>Nhận nuôi</td>
                             <td class="text-center">
-                                <a asp-area="Admin" asp-controller="Home" asp-action="EditChild" class="btn btn-sm btn-info text-white">
-                                    <i class="fa-solid fa-eye"></i>
+                                <a asp-area="Admin" asp-controller="Home" asp-action="AcceptChild" class="btn btn-sm btn-info text-white">
+                                    Xem chi tiết
                                 </a>
-                                <button class="btn btn-sm btn-warning"><i class="fa-solid fa-pen-to-square"></i></button>
-                                <button class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
                             </td>
                         </tr>
                         <tr>
@@ -137,13 +118,11 @@
                             <td class="text-center">Nguyễn Phước Kỳ333</td>
                             <td class="text-center">Nam</td>
                             <td class="text-center">15-01-2004</td>
-                            <td>Trẻ bị bỏ rơi</td>
+                            <td>Gửi đi</td>
                             <td class="text-center">
-                                <a asp-area="Admin" asp-controller="Home" asp-action="EditChild" class="btn btn-sm btn-info text-white">
-                                    <i class="fa-solid fa-eye"></i>
+                                <a asp-area="Admin" asp-controller="Home" asp-action="AcceptChild" class="btn btn-sm btn-info text-white">
+                                    Xem chi tiết
                                 </a>
-                                <button class="btn btn-sm btn-warning"><i class="fa-solid fa-pen-to-square"></i></button>
-                                <button class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
                             </td>
                         </tr>
                         <tr>
@@ -153,13 +132,11 @@
                             <td class="text-center">Nguyễn Phước Kỳ333</td>
                             <td class="text-center">Nam</td>
                             <td class="text-center">15-01-2004</td>
-                            <td>Trẻ bị bỏ rơi</td>
+                            <td>Nhận nuôi</td>
                             <td class="text-center">
-                                <a asp-area="Admin" asp-controller="Home" asp-action="EditChild" class="btn btn-sm btn-info text-white">
-                                    <i class="fa-solid fa-eye"></i>
+                                <a asp-area="Admin" asp-controller="Home" asp-action="AcceptChild" class="btn btn-sm btn-info text-white">
+                                    Xem chi tiết
                                 </a>
-                                <button class="btn btn-sm btn-warning"><i class="fa-solid fa-pen-to-square"></i></button>
-                                <button class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
                             </td>
                         </tr>
                         <tr>
@@ -169,13 +146,11 @@
                             <td class="text-center">Nguyễn Phước Kỳ333</td>
                             <td class="text-center">Nam</td>
                             <td class="text-center">15-01-2004</td>
-                            <td>Trẻ bị bỏ rơi</td>
+                            <td>Gửi đi</td>
                             <td class="text-center">
-                                <a asp-area="Admin" asp-controller="Home" asp-action="EditChild" class="btn btn-sm btn-info text-white">
-                                    <i class="fa-solid fa-eye"></i>
+                                <a asp-area="Admin" asp-controller="Home" asp-action="AcceptChild" class="btn btn-sm btn-info text-white">
+                                    Xem chi tiết
                                 </a>
-                                <button class="btn btn-sm btn-warning"><i class="fa-solid fa-pen-to-square"></i></button>
-                                <button class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
                             </td>
                         </tr>
                     </tbody>
