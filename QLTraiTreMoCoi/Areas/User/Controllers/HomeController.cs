@@ -1,9 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using QLTraiTreMoCoi.Areas.User.Models;
+using QLTraiTreMoCoi.Areas.User.Services;
 
 namespace QLTraiTreMoCoi.Areas.User.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IUserService _userService;
+        public HomeController(IUserService userService)
+        {
+            _userService = userService;   
+        }
         [Area("User")]
         public IActionResult Home()
         {
@@ -13,7 +20,8 @@ namespace QLTraiTreMoCoi.Areas.User.Controllers
         [Area("User")]
         public IActionResult RegisterChild()
         {
-            return View();
+            var req = new RegisterChildReq();
+            return View(req);
         }
 
         [Area("User")]

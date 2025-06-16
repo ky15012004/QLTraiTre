@@ -1,7 +1,10 @@
-﻿namespace QLTraiTreMoCoi.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace QLTraiTreMoCoi.Models
 {
     public class DKNhanNuoiTre
     {
+        [Key]
         public int MaNhanNuoi {  get; set; }
         public int MaNguoiDung {  get; set; }
         public int MaTre {  get; set; }

@@ -1,7 +1,10 @@
-﻿namespace QLTraiTreMoCoi.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace QLTraiTreMoCoi.Models
 {
     public class ThongTinTre
     {
+        [Key]
         public int Matre {  get; set; }
         public string HoTen {  get; set; }
         public DateTime? NgaySinh { get; set; }
