@@ -27,5 +27,11 @@ namespace QLTraiTreMoCoi.Areas.Admin.Controllers
         {
             return View();
         }
+
+        [Area("Admin")]
+        public IActionResult ListAccept()
+        {
+            return View();
+        }
     }
 }
