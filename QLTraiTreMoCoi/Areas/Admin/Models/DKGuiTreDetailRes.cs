@@ -1,17 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using QLTraiTreMoCoi.Models;
 
-namespace QLTraiTreMoCoi.Models
+namespace QLTraiTreMoCoi.Areas.Admin.Models
 {
-    public class DKGuiTre
+    public class DKGuiTreDetailRes
     {
-        [Key]
         public int Id { get; set; }
-
-        [Required]
-        [ForeignKey("NguoiDung")]
-        public string NguoiDungId { get; set; }
-        public NguoiDung NguoiDung { get; set; }
+        public string TenNguoiGui { get; set; }
 
         public DateTime NgayDangKy { get; set; }
 

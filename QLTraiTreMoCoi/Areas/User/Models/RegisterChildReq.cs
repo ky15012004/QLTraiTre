@@ -4,11 +4,10 @@ namespace QLTraiTreMoCoi.Areas.User.Models
 {
     public class RegisterChildReq
     {
-        [Required(ErrorMessage = "MaNguoiDung is required!")]
-        public int MaNguoiDung { get; set; }
+        public string? MaNguoiDung { get; set; }
         public DateTime NgayDangKy { get; set; } = DateTime.Now;
-        public int TrangThai { get; set; }
-        public DateTime NgayTiepNhanTre { get; set; }
+        public int TrangThai { get; set; } = 0;
+        public DateTime? NgayTiepNhanTre { get; set; }
         [Required(ErrorMessage = "HoTenTre is required!")]
         public string HoTenTre { get; set; }
         [Required(ErrorMessage = "NgaySinhTre is required!")]

@@ -1,4 +1,6 @@
-﻿@{
+﻿@model List<QLTraiTreMoCoi.Areas.Admin.Models.DKGuiTreRes>
+
+@{
     ViewData["Title"] = "Duyệt đơn đăng ký";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
@@ -17,137 +19,34 @@
                             <th>Họ và tên</th>
                             <th>Giới tính</th>
                             <th>Ngày sinh</th>
-                            <th>Địa chỉ</th>
+                            <th>Hoan Canh</th>
                             <th>Hành động</th>
                         </tr>
                     </thead>
                     <tbody id="childrenTable">
-                        <tr>
-                            <td class="text-center">
-                                <img src="~/images/image 4.png" alt="Avatar" style="width: 80px; height: 80px; object-fit: cover; border-radius: 5px;">
-                            </td>
-                            <td class="text-center">Nguyễn Phước Kỳ111</td>
-                            <td class="text-center">Nữ</td>
-                            <td class="text-center">15-01-2004</td>
-                            <td>Quảng Trị</td>
-                            <td class="text-center">
-                                <a asp-area="Admin" asp-controller="Approve" asp-action="ApproveApplication" class="btn btn-sm btn-info text-white">
-                                    Xem chi tiết
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">
-                                <img src="~/images/image 4.png" alt="Avatar" style="width: 80px; height: 80px; object-fit: cover; border-radius: 5px;">
-                            </td>
-                            <td class="text-center">Nguyễn Phước Kỳ111</td>
-                            <td class="text-center">Nữ</td>
-                            <td class="text-center">15-01-2004</td>
-                            <td>Quảng Trị</td>
-                            <td class="text-center">
-                                <a asp-area="Admin" asp-controller="Approve" asp-action="ApproveApplication" class="btn btn-sm btn-info text-white">
-                                    Xem chi tiết
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">
-                                <img src="~/images/image 4.png" alt="Avatar" style="width: 80px; height: 80px; object-fit: cover; border-radius: 5px;">
-                            </td>
-                            <td class="text-center">Nguyễn Phước Kỳ111</td>
-                            <td class="text-center">Nữ</td>
-                            <td class="text-center">15-01-2004</td>
-                            <td>Quảng Trị</td>
-                            <td class="text-center">
-                                <a asp-area="Admin" asp-controller="Approve" asp-action="ApproveApplication" class="btn btn-sm btn-info text-white">
-                                    Xem chi tiết
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">
-                                <img src="~/images/image 4.png" alt="Avatar" style="width: 80px; height: 80px; object-fit: cover; border-radius: 5px;">
-                            </td>
-                            <td class="text-center">Nguyễn Phước Kỳ222</td>
-                            <td class="text-center">Nữ</td>
-                            <td class="text-center">15-01-2004</td>
-                            <td>Quảng Trị</td>
-                            <td class="text-center">
-                                <a asp-area="Admin" asp-controller="Approve" asp-action="ApproveApplication" class="btn btn-sm btn-info text-white">
-                                    Xem chi tiết
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">
-                                <img src="~/images/image 4.png" alt="Avatar" style="width: 80px; height: 80px; object-fit: cover; border-radius: 5px;">
-                            </td>
-                            <td class="text-center">Nguyễn Phước Kỳ222</td>
-                            <td class="text-center">Nam</td>
-                            <td class="text-center">15-01-2004</td>
-                            <td>Quảng Trị</td>
-                            <td class="text-center">
-                                <a asp-area="Admin" asp-controller="Approve" asp-action="ApproveApplication" class="btn btn-sm btn-info text-white">
-                                    Xem chi tiết
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">
-                                <img src="~/images/image 4.png" alt="Avatar" style="width: 80px; height: 80px; object-fit: cover; border-radius: 5px;">
-                            </td>
-                            <td class="text-center">Nguyễn Phước Kỳ222</td>
-                            <td class="text-center">Nam</td>
-                            <td class="text-center">15-01-2004</td>
-                            <td>Quảng Trị</td>
-                            <td class="text-center">
-                                <a asp-area="Admin" asp-controller="Approve" asp-action="ApproveApplication" class="btn btn-sm btn-info text-white">
-                                    Xem chi tiết
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">
-                                <img src="~/images/image 4.png" alt="Avatar" style="width: 80px; height: 80px; object-fit: cover; border-radius: 5px;">
-                            </td>
-                            <td class="text-center">Nguyễn Phước Kỳ333</td>
-                            <td class="text-center">Nam</td>
-                            <td class="text-center">15-01-2004</td>
-                            <td>Quảng Trị</td>
-                            <td class="text-center">
-                                <a asp-area="Admin" asp-controller="Approve" asp-action="ApproveApplication" class="btn btn-sm btn-info text-white">
-                                    Xem chi tiết
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">
-                                <img src="~/images/image 4.png" alt="Avatar" style="width: 80px; height: 80px; object-fit: cover; border-radius: 5px;">
-                            </td>
-                            <td class="text-center">Nguyễn Phước Kỳ333</td>
-                            <td class="text-center">Nam</td>
-                            <td class="text-center">15-01-2004</td>
-                            <td>Quảng Trị</td>
-                            <td class="text-center">
-                                <a asp-area="Admin" asp-controller="Approve" asp-action="ApproveApplication" class="btn btn-sm btn-info text-white">
-                                    Xem chi tiết
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">
-                                <img src="~/images/image 4.png" alt="Avatar" style="width: 80px; height: 80px; object-fit: cover; border-radius: 5px;">
-                            </td>
-                            <td class="text-center">Nguyễn Phước Kỳ333</td>
-                            <td class="text-center">Nam</td>
-                            <td class="text-center">15-01-2004</td>
-                            <td>Quảng Trị</td>
-                            <td class="text-center">
-                                <a asp-area="Admin" asp-controller="Approve" asp-action="ApproveApplication" class="btn btn-sm btn-info text-white">
-                                    Xem chi tiết
-                                </a>
-                            </td>
-                        </tr>
+                        
+                    <tbody id="childrenTable">
+                            @foreach (var item in Model)
+                            {
+                            <tr>
+                                <td class="text-center">
+                                    <img src="@item.ImageUrl" alt="Avatar" style="width: 80px; height: 80px; object-fit: cover; border-radius: 5px;">
+                                </td>
+                                <td class="text-center">@item.HoTen</td>
+                                <td class="text-center">@(item.GioiTinh == 1 ? "Nam" : "Nữ")</td>
+                                <td class="text-center">@item.NgaySinh?.ToString("dd/MM/yyyy")</td>
+                                <td class="text-center">
+                                        @(item.HoanCanh == 1 ? "Trẻ bị bỏ rơi" : item.HoanCanh == 2 ? "Mồ côi cha mẹ" : "Không rõ")
+                                </td>
+                                <td class="text-center">
+                                    <a asp-area="Admin" asp-controller="Approve" asp-action="ApproveApplication" asp-route-id="@item.Id" class="btn btn-sm btn-info text-white">
+                                        Xem chi tiết
+                                    </a>
+                                </td>
+                            </tr>
+                            }
+
+                    </tbody>
                     </tbody>
                 </table>
                 <nav class="d-flex justify-content-center mt-4">

@@ -1,14 +1,25 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using QLTraiTreMoCoi.Models;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
-namespace QLTraiTreMoCoi.Models
+public class DKNhanNuoiTre
 {
-    public class DKNhanNuoiTre
-    {
-        [Key]
-        public int MaNhanNuoi {  get; set; }
-        public int MaNguoiDung {  get; set; }
-        public int MaTre {  get; set; }
-        public DateTime NgayDangKy { get; set; }
-        public int TrangThai { get; set; }
-    }
+    [Key]
+    public int Id { get; set; }
+
+    [Required]
+    public string NguoiDungId { get; set; }
+
+    [ForeignKey("NguoiDungId")]
+    public NguoiDung NguoiDung { get; set; }
+
+    [Required]
+    public int TreId { get; set; }
+
+    [ForeignKey("TreId")]
+    public ThongTinTre ThongTinTre { get; set; }
+
+    public DateTime NgayDangKy { get; set; }
+
+    public int TrangThai { get; set; }
 }

@@ -5,7 +5,7 @@ namespace QLTraiTreMoCoi.Models
     public class ThongTinTre
     {
         [Key]
-        public int Matre {  get; set; }
+        public int Id {  get; set; }
         public string HoTen {  get; set; }
         public DateTime? NgaySinh { get; set; }
         public int GioiTinh { get; set; }
@@ -14,5 +14,8 @@ namespace QLTraiTreMoCoi.Models
         public DateTime? NgayRoiTrai { get; set; }
         public int TrangThai {  get; set; }
         public int HoanCanh { get; set; }
+
+        public ICollection<DKNhanNuoiTre> DKNhanNuoiTres { get; set; }
+        public ICollection<LSCapNhatHoSoTre> CapNhatHoSoTres { get; set; }
     }
 }

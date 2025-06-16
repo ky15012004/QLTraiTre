@@ -4,6 +4,6 @@ namespace QLTraiTreMoCoi.Areas.User.Services
 {
     public interface IUserService
     {
-        public DataResponse<string> RegisterChild();
+        public Task<DataResponse<string>> RegisterChild(RegisterChildReq req);
     }
 }

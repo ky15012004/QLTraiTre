@@ -1,84 +1,73 @@
-﻿<div class="d-flex">
+﻿@model QLTraiTreMoCoi.Areas.Admin.Models.DKGuiTreDetailRes
+
+<div class="d-flex">
     <div style="height: calc(100vh - 179px); width: 22%;"></div>
 
     <div class="px-5 py-3" style="background-color: #e0e0e0; min-height: 50vh; width: 78%;">
         <div class="">
             <p class="fs-5">DUYỆT ĐƠN ĐĂNG KÝ</p>
             <div class="shadow bg-white rounded p-5 position-relative" style="width: 50vw">
-                <a href="" class="position-absolute" style="top: 15px; right: 20px;"><i class="fa-solid fa-xmark fs-4 text-black"></i></a>
-                <form action="" class="d-flex align-items-start gap-5">
+                <a asp-area="Admin" asp-controller="Approve" asp-action="ListApprove" class="position-absolute" style="top: 15px; right: 20px;">
+                    <i class="fa-solid fa-xmark fs-4 text-black"></i>
+                </a>
+
+                <div class="d-flex align-items-start gap-5">
                     <div class="d-flex align-items-center flex-column gap-3" style="width: 30%;">
-                        <img id="previewImage" src="~/images/image 4.png" class="w-100" style="height: 200px; object-fit: cover;" alt="Preview">
+                        <img id="previewImage" src="@Model.UrlAnh" class="w-100" style="height: 200px; object-fit: cover;" alt="Ảnh trẻ">
                     </div>
-                    <div style="width: 65%;" class="d-flex flex-column gap-2">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <label class="fw-bold" for="">Họ và tên:</label>
-                            <input style="width: 58%;" class="border-1 border-black px-3 py-2" type="text" name="" id="" value="Nguyễn Phước Kỳ">
+
+                    <div style="width: 65%;" class="d-flex flex-column gap-3">
+                        <div class="d-flex justify-content-between">
+                            <span class="fw-bold">Họ và tên:</span>
+                            <span>@Model.HoTenTre</span>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <label class="fw-bold" for="">Giới Tính:</label>
-                            <input style="width: 58%;" class="border-1 border-black px-3 py-2" type="text" name="" id="" value="Nam">
+                        <div class="d-flex justify-content-between">
+                            <span class="fw-bold">Giới tính:</span>
+                            <span>@(Model.GioiTinhTre == 1 ? "Nam" : "Nữ")</span>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <label class="fw-bold" for="">Ngày sinh:</label>
-                            <input style="width: 58%;" class="border-1 border-black px-3 py-2" type="datetime" name="" id="" value="15-01-2004">
+                        <div class="d-flex justify-content-between">
+                            <span class="fw-bold">Ngày sinh:</span>
+                            <span>@Model.NgaySinhTre.ToString("dd/MM/yyyy")</span>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <label class="fw-bold" for="">Nơi sinh:</label>
-                            <input style="width: 58%;" class="border-1 border-black px-3 py-2" type="text" name="" id="" value="Quảng Trị">
+                        <div class="d-flex justify-content-between">
+                            <span class="fw-bold">Dân tộc:</span>
+                            <span>@Model.DanTocTre</span>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <label class="fw-bold" for="">Số giấy khai sinh:</label>
-                            <input style="width: 58%;" class="border-1 border-black px-3 py-2" type="text" name="" id="" value="187438539583">
+                        <div class="d-flex justify-content-between">
+                            <span class="fw-bold">Hoàn cảnh:</span>
+                            <span>
+                                @(Model.HoanCanh == 1 ? "Trẻ bị bỏ rơi" :
+                                    Model.HoanCanh == 2 ? "Mồ côi cha mẹ" : "Khác")
+                            </span>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <label class="fw-bold" for="">Dân tộc:</label>
-                            <input style="width: 58%;" class="border-1 border-black px-3 py-2" type="text" name="" id="" value="King">
+                        <div class="d-flex justify-content-between">
+                            <span class="fw-bold">Ngày đăng ký:</span>
+                            <span>@Model.NgayDangKy.ToString("dd/MM/yyyy")</span>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <label class="fw-bold" for="">Tình trạng sức khỏe:</label>
-                            <input style="width: 58%;" class="border-1 border-black px-3 py-2" type="text" name="" id="" value="Bình thường">
+                        <div class="d-flex justify-content-between">
+                            <span class="fw-bold">Người gửi:</span>
+                            <span>@Model.TenNguoiGui</span>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <label class="fw-bold" for="">Hoàn cảnh:</label>
-                            <select style="width: 58%;" class="border-1 border-black px-3 py-2" name="" id="">
-                                <option selected value="">Trẻ bị bỏ rơi</option>
-                            </select>
+                        <div class="d-flex justify-content-between">
+                            <span class="fw-bold">Quan hệ với người gửi:</span>
+                            <span>
+                                @(Model.QuanHeVoiNguoiGui == 1 ? "Cha/Mẹ" :
+                                    Model.QuanHeVoiNguoiGui == 2 ? "Người giám hộ" :
+                                    Model.QuanHeVoiNguoiGui == 3 ? "Tình nguyện viên" : "Không rõ")
+                            </span>
                         </div>
 
-                        <div class="d-flex justify-content-end gap-4 mt-3 align-items-center">
-                            <button class="btn btn-primary w-25" type="submit">Duyệt</button>
-                            <button class="btn btn-danger w-25" type="submit">Hủy</button>
+                        <div class="d-flex justify-content-end gap-4 mt-3">
+                            <form asp-action="ApproveConfirm" asp-route-id="@Model.Id" method="post">
+                                <button class="btn btn-primary px-4" type="submit">Duyệt</button>
+                            </form>
+                            <form asp-action="CancelRequest" asp-route-id="@Model.Id" method="post">
+                                <button class="btn btn-danger px-4" type="submit">Hủy</button>
+                            </form>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const uploadBtn = document.getElementById('uploadBtn');
-        const imageInput = document.getElementById('imageUpload');
-        const previewImage = document.getElementById('previewImage');
-
-        uploadBtn.addEventListener('click', () => {
-            imageInput.click();
-        });
-
-        imageInput.addEventListener('change', (event) => {
-            console.log(1111);
-
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    previewImage.src = e.target.result;
-                };
-                reader.readAsDataURL(file);
-            }
-        });
-    });
-</script>

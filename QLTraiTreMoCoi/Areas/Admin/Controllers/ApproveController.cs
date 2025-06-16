@@ -1,19 +1,32 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using QLTraiTreMoCoi.Areas.Admin.Services;
 
 namespace QLTraiTreMoCoi.Areas.Admin.Controllers
 {
     public class ApproveController : Controller
     {
-        [Area("Admin")]
-        public IActionResult ListApprove()
+        private readonly IAdminService _adminService;
+        public ApproveController(IAdminService adminService)
         {
-            return View();
+            _adminService = adminService;
+        }
+        [Area("Admin")]
+        public async Task<IActionResult> ListApprove()
+        {
+            var list = await _adminService.GetListDKGuiTre();
+            return View(list);
         }
 
         [Area("Admin")]
-        public IActionResult ApproveApplication()
+        [HttpGet]
+        public async Task<IActionResult> ApproveApplication(int id)
         {
-            return View();
+            var model = await _adminService.GetDKGuiTre(id);
+            if (model == null)
+            {
+                return NotFound();
+            }
+            return View(model);
         }
     }
 }

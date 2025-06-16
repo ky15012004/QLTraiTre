@@ -1,5 +1,7 @@
-﻿@{
-    ViewData["Title"] = "Đăng nhập";
+﻿@model QLTraiTreMoCoi.ViewModels.RegisterViewModel
+
+@{
+    ViewData["Title"] = "Đăng ký";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -9,29 +11,35 @@
             <span class="blue-white-color">Đăng ký</span>
         </p>
 
-        <!-- Form đăng nhập thông thường -->
-        <form asp-action="Register">
+        <!-- Form đăng ký -->
+        <form asp-action="Register" asp-controller="Account" method="post">
             <div class="mb-3">
-                <label class="form-label">Căn cước công dân</label>
-                <input class="form-control" placeholder="Nhập số căn cước công dân" />
+                <label asp-for="CCCD" class="form-label">Căn cước công dân</label>
+                <input asp-for="CCCD" class="form-control" placeholder="Nhập số căn cước công dân" />
+                <span asp-validation-for="CCCD" class="text-danger"></span>
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Mật khẩu</label>
-                <input class="form-control" placeholder="Mật khẩu" />
+                <label asp-for="HoTen" class="form-label">Họ tên</label>
+                <input asp-for="HoTen" class="form-control" placeholder="Nhập họ tên" />
+                <span asp-validation-for="HoTen" class="text-danger"></span>
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Xác nhận mật khẩu</label>
-                <input class="form-control" placeholder="Xác nhận mật khẩu" />
+                <label asp-for="Password" class="form-label">Mật khẩu</label>
+                <input asp-for="Password" class="form-control" placeholder="Mật khẩu" />
+                <span asp-validation-for="Password" class="text-danger"></span>
             </div>
 
-            <a asp-controller="Account" asp-action="Login"
-               class="btn btn-success text-white w-100"
-               style="background-color: #2D207A;">
+            <div class="mb-3">
+                <label asp-for="ConfirmPassword" class="form-label">Xác nhận mật khẩu</label>
+                <input asp-for="ConfirmPassword" class="form-control" placeholder="Xác nhận mật khẩu" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-success text-white w-100" style="background-color: #2D207A;">
                 Đăng ký
-            </a>
-
+            </button>
 
             <p class="text-center mt-2">
                 Bạn đã có tài khoản?
@@ -41,3 +49,6 @@
     </div>
 </div>
 
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

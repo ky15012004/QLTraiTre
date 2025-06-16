@@ -1,14 +1,25 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using QLTraiTreMoCoi.Models;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
-namespace QLTraiTreMoCoi.Models
+public class LSCapNhatHoSoTre
 {
-    public class LSCapNhatHoSoTre
-    {
-        [Key]
-        public int MaCapNhatHoSo {  get; set; }
-        public int Matre {  get; set; }
-        public string MaNguoiDung { get; set; }
-        public  DateTime ThoiGian {  get; set; }
-        public string? NoiDungCapNhat {  get; set; }
-    }
+    [Key]
+    public int Id { get; set; }
+
+    [Required]
+    public int TreId { get; set; }
+
+    [ForeignKey("TreId")]
+    public ThongTinTre ThongTinTre { get; set; } // Dùng đúng tên entity để tránh sinh cột phụ
+
+    [Required]
+    public string NguoiDungId { get; set; }
+
+    [ForeignKey("NguoiDungId")]
+    public NguoiDung NguoiDung { get; set; }
+
+    public DateTime ThoiGian { get; set; }
+
+    public string? NoiDungCapNhat { get; set; }
 }
