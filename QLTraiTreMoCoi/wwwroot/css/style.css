@@ -1,0 +1,40 @@
+﻿.blue-white-color {
+    color: #459ADB;
+}
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.bg-primary-color {
+    background-color: #070336;
+}
+
+.color-primary {
+    color: #070336;
+}
+
+.color-FF0000 {
+    color: #FF0000;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+.text-hover:hover, .active {
+    background-color: #070336;
+    color: white !important;
+    transition: 0.3;
+    border-radius: 6px;
+}
+
+.pointer {
+    cursor: pointer;
+}

@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Đăng nhập";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="account-container">
+    <div class="account-box">
+        <p class="text fs-4 fw-semibold text-center">
+            <span class="blue-white-color">Đăng ký</span>
+        </p>
+
+        <!-- Form đăng nhập thông thường -->
+        <form asp-action="Register">
+            <div class="mb-3">
+                <label class="form-label">Căn cước công dân</label>
+                <input class="form-control" placeholder="Nhập số căn cước công dân" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Mật khẩu</label>
+                <input class="form-control" placeholder="Mật khẩu" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Xác nhận mật khẩu</label>
+                <input class="form-control" placeholder="Xác nhận mật khẩu" />
+            </div>
+
+            <a asp-controller="Account" asp-action="Login"
+               class="btn btn-success text-white w-100"
+               style="background-color: #2D207A;">
+                Đăng ký
+            </a>
+
+
+            <p class="text-center mt-2">
+                Bạn đã có tài khoản?
+                <a asp-controller="Account" asp-action="Login" class="text-decoration-none">Đăng nhập</a>
+            </p>
+        </form>
+    </div>
+</div>
+

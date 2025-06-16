@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+<body>
+
+    <header class="bg-primary-color" style="padding: 30px 9%;">
+        <div class="d-flex justify-content-between align-items-center">
+            <!-- logo -->
+            <div class="d-flex align-items-center gap-3">
+                <img src="./images//image.png" class="rounded" style="width: 100px; height: 70px;" alt="">
+                <p class="text-white fs-5 m-0">Trại trẻ mồ côi <br>TP. Đà Nẵng</p>
+            </div>
+            <div class="d-flex align-items-center gap-5">
+                <!-- search -->
+                <div class="d-flex gap-2 p-2 rounded bg-white align-items-center">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input style="border: none; outline: none;" type="text" placeholder="Tìm kiếm thông tin">
+                </div>
+                <!-- icon -->
+                <div class="text-white d-flex align-items-center gap-4">
+                    <div class="d-flex align-items-center gap-2">
+                        <div style="width: 40px; height: 40px;"
+                             class="d-flex align-items-center justify-content-center rounded-circle bg-black">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        0346387246
+                    </div>
+                    <a href="" class="text-white text-decoration-none">Đăng nhập</a>
+                    <a href="" class="text-white text-decoration-none">Đăng ký</a>
+                </div>
+            </div>
+        </div>
+        <nav class="d-flex gap-5 align-items-center mt-4">
+            <a asp-area="User" asp-controller="Home" asp-action="Home" class="text-decoration-none text-white">Trang chủ</a>
+            <a asp-area="User" asp-controller="Home" asp-action="UpdateInfo" class="text-decoration-none text-white">Thông tin cá nhân</a>
+            <a asp-area="User" asp-controller="Home" asp-action="RegisterChild" class="text-decoration-none text-white">Đăng ký gửi trẻ</a>
+            <a asp-area="User" asp-controller="Home" asp-action="AdoptChild" class="text-decoration-none text-white">Đăng ký nhận nuôi trẻ</a>
+        </nav>
+    </header>
+    <div>        
+            @RenderBody()
+    </div>
+
+    <footer class="p-5 bg-primary-color text-white">
+        <div class="d-flex" style="gap: 15rem;">
+            <div class="d-flex flex-column gap-3">
+                <div class="d-flex align-items-center gap-3">
+                    <img src="./images//image.png" class="rounded" style="width: 100px; height: 70px;" alt="">
+                    <p class="text-white fs-5 m-0">Trại trẻ mồ côi <br>TP. Đà Nẵng</p>
+                </div>
+                <div class="d-flex align-items-center ga-2">
+                    <i class="fa-solid fa-phone"></i>
+                    (00) 346 387 246
+                </div>
+                <div class="d-flex align-items-center ga-2">
+                    <i class="fa-solid fa-envelope"></i>
+                    traimocoi@gmail.com
+                </div>
+                <div class="d-flex gap-3 align-items-center">
+                    <img style="width: 40px; height: 40px;" src="./images/footer-1.png" alt="">
+                    <img style="width: 40px; height: 40px;" src="./images/footer-2.png" alt="">
+                    <img style="width: 40px; height: 40px;" src="./images/footer-3.png" alt="">
+                    <img style="width: 40px; height: 40px;" src="./images/footer-4.png" alt="">
+                </div>
+            </div>
+            <div class="d-flex flex-column gap-3">
+                <h3>TRẠI TRẺ</h3>
+                <a class="text-white text-decoration-none" href="">Về chúng tôi</a>
+                <a class="text-white text-decoration-none" href="">Liên hệ</a>
+            </div>
+            <div class="d-flex flex-column gap-3">
+                <h3>HỖ TRỢ</h3>
+                <a class="text-white text-decoration-none" href="">Đăng ký gửi trẻ</a>
+                <a class="text-white text-decoration-none" href="">Đăng ký nhận trẻ</a>
+                <a class="text-white text-decoration-none" href="">Bảo mật</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

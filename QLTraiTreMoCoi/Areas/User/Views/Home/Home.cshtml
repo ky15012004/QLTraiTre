@@ -1,0 +1,197 @@
+﻿@* @{ *@
+@*     ViewData["Title"] = "Trang chủ"; *@
+@*     Layout = "~/Areas/User/Views/Shared/_Layout.cshtml"; *@
+@* } *@
+
+<main class="py-5" style="padding: 0 9%;">
+    <!-- Giới thiệu -->
+    <section class="mb-5">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="./images/home-intro.jpg" class="img-fluid rounded" alt="Giới thiệu">
+            </div>
+            <div class="col-md-6">
+                <h2 class="mb-3">Chào mừng đến với Trại trẻ mồ côi TP. Đà Nẵng</h2>
+                <p>
+                    Nơi nuôi dưỡng và chăm sóc các em nhỏ thiếu may mắn, giúp các em có một mái ấm, được học tập và phát triển toàn diện. Hãy cùng chung tay vì tương lai của các em.
+                </p>
+                <a href="#" class="btn btn-primary">Tìm hiểu thêm</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dịch vụ nổi bật -->
+    <section class="mb-5">
+        <h3 class="text-center mb-4">Hoạt động nổi bật</h3>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="./images/service-1.jpg" class="card-img-top" alt="Gửi trẻ">
+                    <div class="card-body">
+                        <h5 class="card-title">Đăng ký gửi trẻ</h5>
+                        <p class="card-text">Giúp các bé có mái nhà và sự chăm sóc tốt nhất trong môi trường an toàn, yêu thương.</p>
+                        <a href="#" class="btn btn-outline-primary">Xem chi tiết</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="./images/service-2.jpg" class="card-img-top" alt="Nhận nuôi">
+                    <div class="card-body">
+                        <h5 class="card-title">Nhận nuôi trẻ</h5>
+                        <p class="card-text">Mang lại hạnh phúc cho các em nhỏ bằng cách trở thành gia đình mới cho các em.</p>
+                        <a href="#" class="btn btn-outline-primary">Xem chi tiết</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="./images/service-3.jpg" class="card-img-top" alt="Tình nguyện">
+                    <div class="card-body">
+                        <h5 class="card-title">Tình nguyện viên</h5>
+                        <p class="card-text">Tham gia hoạt động thiện nguyện, góp phần tạo nên môi trường sống tích cực cho các em.</p>
+                        <a href="#" class="btn btn-outline-primary">Tham gia ngay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Thư viện hình ảnh -->
+    <section>
+        <h3 class="text-center mb-4">Hình ảnh hoạt động</h3>
+        <div class="row g-3">
+            <div class="col-md-3 col-6">
+                <img src="./images/gallery-1.jpg" class="img-fluid rounded" alt="Gallery">
+            </div>
+            <div class="col-md-3 col-6">
+                <img src="./images/gallery-2.jpg" class="img-fluid rounded" alt="Gallery">
+            </div>
+            <div class="col-md-3 col-6">
+                <img src="./images/gallery-3.jpg" class="img-fluid rounded" alt="Gallery">
+            </div>
+            <div class="col-md-3 col-6">
+                <img src="./images/gallery-4.jpg" class="img-fluid rounded" alt="Gallery">
+            </div>
+        </div>
+    </section>
+    <!-- Trẻ em nổi bật dạng carousel -->
+    <!-- Carousel từng bé -->
+    <section class="py-5">
+        <h3 class="text-center mb-4">Các bé nổi bật</h3>
+        <div class="container overflow-hidden position-relative">
+            <div id="childSlider" class="d-flex transition" style="gap: 1rem; transition: transform 0.6s ease;">
+                <!-- Mỗi bé là 1 card -->
+                <div class="child-card card text-center" style="min-width: 30%; flex-shrink: 0;">
+                    <img src="./images/child-1.jpg" class="card-img-top" alt="Bé 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Bé An</h5>
+                        <p class="card-text">4 tuổi, yêu vẽ tranh.</p>
+                    </div>
+                </div>
+                <div class="child-card card text-center" style="min-width: 30%; flex-shrink: 0;">
+                    <img src="./images/child-2.jpg" class="card-img-top" alt="Bé 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Bé Bình</h5>
+                        <p class="card-text">6 tuổi, thích đọc truyện.</p>
+                    </div>
+                </div>
+                <div class="child-card card text-center" style="min-width: 30%; flex-shrink: 0;">
+                    <img src="./images/child-3.jpg" class="card-img-top" alt="Bé 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Bé Cúc</h5>
+                        <p class="card-text">5 tuổi, thích ca hát.</p>
+                    </div>
+                </div>
+                <div class="child-card card text-center" style="min-width: 30%; flex-shrink: 0;">
+                    <img src="./images/child-4.jpg" class="card-img-top" alt="Bé 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Bé Duy</h5>
+                        <p class="card-text">7 tuổi, yêu thiên nhiên.</p>
+                    </div>
+                </div>
+                <div class="child-card card text-center" style="min-width: 30%; flex-shrink: 0;">
+                    <img src="./images/child-5.jpg" class="card-img-top" alt="Bé 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Bé Em</h5>
+                        <p class="card-text">5 tuổi, thân thiện.</p>
+                    </div>
+                </div>
+                <div class="child-card card text-center" style="min-width: 30%; flex-shrink: 0;">
+                    <img src="./images/child-6.jpg" class="card-img-top" alt="Bé 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Bé Phúc</h5>
+                        <p class="card-text">6 tuổi, thích đàn hát.</p>
+                    </div>
+                </div>
+                <div class="child-card card text-center" style="min-width: 30%; flex-shrink: 0;">
+                    <img src="./images/child-7.jpg" class="card-img-top" alt="Bé 7">
+                    <div class="card-body">
+                        <h5 class="card-title">Bé Hòa</h5>
+                        <p class="card-text">4 tuổi, ngoan hiền.</p>
+                    </div>
+                </div>
+                <div class="child-card card text-center" style="min-width: 30%; flex-shrink: 0;">
+                    <img src="./images/child-8.jpg" class="card-img-top" alt="Bé 8">
+                    <div class="card-body">
+                        <h5 class="card-title">Bé Khôi</h5>
+                        <p class="card-text">6 tuổi, yêu thể thao.</p>
+                    </div>
+                </div>
+                <div class="child-card card text-center" style="min-width: 30%; flex-shrink: 0;">
+                    <img src="./images/child-9.jpg" class="card-img-top" alt="Bé 9">
+                    <div class="card-body">
+                        <h5 class="card-title">Bé Ngọc</h5>
+                        <p class="card-text">5 tuổi, giúp đỡ bạn.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Phản hồi người nhận nuôi -->
+    <section class="py-5 bg-light">
+        <h3 class="text-center mb-4">Cảm nhận từ cộng đồng</h3>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="border rounded p-4 bg-white shadow-sm">
+                    <p><i class="fa-solid fa-quote-left me-2 text-primary"></i>Chúng tôi cảm thấy rất hạnh phúc khi được đồng hành cùng trại trẻ, và được nhận nuôi một bé ngoan ngoãn, hiền lành.</p>
+                    <div class="text-end fst-italic">— Anh Hùng, TP. Hồ Chí Minh</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="border rounded p-4 bg-white shadow-sm">
+                    <p><i class="fa-solid fa-quote-left me-2 text-primary"></i>Những gì các cô chú ở đây làm thật đáng quý. Tôi luôn ủng hộ và sẽ tiếp tục đóng góp thường xuyên.</p>
+                    <div class="text-end fst-italic">— Chị Lan, Đà Nẵng</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kêu gọi ủng hộ -->
+    <section class="py-5 text-center text-white bg-primary">
+        <div class="container">
+            <h3 class="mb-3">Chung tay cùng chúng tôi</h3>
+            <p class="mb-4">Mỗi sự đóng góp nhỏ đều mang lại ý nghĩa lớn lao cho các em nhỏ. Hãy tham gia và tạo nên sự khác biệt!</p>
+            <a href="#" class="btn btn-light btn-lg">Ủng hộ ngay</a>
+        </div>
+    </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+<script>
+    const slider = document.getElementById('childSlider');
+    const cards = document.querySelectorAll('.child-card');
+    let index = 0;
+
+    setInterval(() => {
+        index++;
+        if (index > cards.length - 3) index = 0;
+        const cardWidth = cards[0].offsetWidth + 16; // 16 là khoảng cách gap
+        slider.style.transform = `translateX(-${index * cardWidth}px)`;
+    }, 1500);
+</script>
+

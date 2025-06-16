@@ -1,0 +1,76 @@
+﻿<div class="shadow bg-white rounded p-5 position-relative" style="width: 80vw">
+    <form action="" class="d-flex align-items-start gap-5">
+        <div class="d-flex align-items-center flex-column gap-3" style="width: 30%; margin:0 70px ;">
+            <img id="previewImage" src="./images/image 4.png" style="height: 200px; object-fit: cover; width: 200;" alt="Preview">
+
+            <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+            <button id="uploadBtn" class="bg-primary-color text-white px-3 py-2 rounded" type="button">
+                Upload <i class="fa-solid fa-download"></i>
+            </button>
+        </div>
+        <div style="width: 100%;" class="d-flex flex-column gap-2">
+            <div class="d-flex justify-content-between align-items-center">
+                <label class="fw-bold" for="">Họ và tên:</label>
+                <input style="width: 58%;" class="border-1 border-black px-3 py-2" type="text" name="" id="" value="Nguyễn Phước Kỳ">
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <label class="fw-bold" for="">Giới Tính:</label>
+                <input style="width: 58%;" class="border-1 border-black px-3 py-2" type="text" name="" id="" value="Nam">
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <label class="fw-bold" for="">Căn cước công dân:</label>
+                <input style="width: 58%;" class="border-1 border-black px-3 py-2" type="datetime" name="" id="" value="012903904295042">
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <label class="fw-bold" for="">Email:</label>
+                <input style="width: 58%;" class="border-1 border-black px-3 py-2" type="text" name="" id="" value="nguyenphuocky@gmail.com">
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <label class="fw-bold" for="">Số điện thoại:</label>
+                <input style="width: 58%;" class="border-1 border-black px-3 py-2" type="text" name="" id="" value="09536573853">
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <label class="fw-bold" for="">Tình trạng sức khỏe:</label>
+                <input style="width: 58%;" class="border-1 border-black px-3 py-2" type="text" name="" id="" value="Số điện thoại">
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <label class="fw-bold" for="">Địa chỉ:</label>
+                <input style="width: 58%;" class="border-1 border-black px-3 py-2" type="text" name="" id="" value="Quảng Trị">
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <label class="fw-bold" for="">Ngày sinh:</label>
+                <input style="width: 58%;" class="border-1 border-black px-3 py-2" type="text" name="" id="" value="15-01-2004">
+            </div>
+
+            <div class="d-flex justify-content-end gap-4 mt-3 align-items-center">
+                <button class="btn btn-primary" type="submit">Cập nhật</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const uploadBtn = document.getElementById('uploadBtn');
+        const imageInput = document.getElementById('imageUpload');
+        const previewImage = document.getElementById('previewImage');
+
+        uploadBtn.addEventListener('click', () => {
+            imageInput.click();
+        });
+
+        imageInput.addEventListener('change', (event) => {
+            console.log(1111);
+
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    previewImage.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    });
+</script>
